@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/yongmin_xia/REA/jetwire'
-let g:netrw_dirhist_2='/tmp'
-let g:netrw_dirhist_3='/Users/yongmin_xia/REA/product-e2e'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/yongmin_xia/Downloads/chef-repo-latest/cookbooks'
+let g:netrw_dirhist_2='/Users/yongmin_xia/REA/customer-systems-integration/tmp/customer-systems-integration'
+let g:netrw_dirhist_3='/Users/yongmin_xia/REA/customer-systems-integration'
+let g:netrw_dirhist_4='/Users/yongmin_xia/REA/cp-auth'
+let g:netrw_dirhist_5='/Users/yongmin_xia/REA/customer-systems-integration'
+let g:netrw_dirhist_6='/Users/yongmin_xia/REA/gandalf/chef-repo-combined/repos/apps-customer-platform/cookbooks/customer-platform'
