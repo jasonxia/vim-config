@@ -41,3 +41,4 @@ call pathogen#infect()
 set mouse=a
 set paste
 
+let g:Powerline_symbols='unicode'
