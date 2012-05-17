@@ -1,12 +1,12 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/ruby-cucumber"]
-	path = bundle/ruby-cucumber
-	url = git://github.com/vinhtiensinh/ruby-cucumber.git
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git

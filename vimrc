@@ -31,7 +31,7 @@ syntax on
 
 
 map <Leader>, :NERDTreeToggle<cr>
-map <Leader>t :CommandT<cr>
+map <Leader>b :BufExplorerHorizontalSplit<cr>
 
  "Colorscheme options
 colorscheme vividchalk
@@ -42,3 +42,5 @@ set mouse=a
 set paste
 
 let g:Powerline_symbols='unicode'
+let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_match_window_reversed = 0
