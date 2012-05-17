@@ -25,22 +25,21 @@ set wildmode=longest,list,full
 set wildmenu
 set nobackup
 set nocompatible
+set mouse=a
+set paste
+"Colorscheme options
+colorscheme vividchalk
+set t_Co=256
 
 filetype plugin indent on
 syntax on
 
-
 map <Leader>, :NERDTreeToggle<cr>
 map <Leader>b :BufExplorerHorizontalSplit<cr>
 
- "Colorscheme options
-colorscheme vividchalk
-set t_Co=256
-
 call pathogen#infect() 
-set mouse=a
-set paste
 
+"set global variable
 let g:Powerline_symbols='unicode'
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_match_window_reversed = 0
