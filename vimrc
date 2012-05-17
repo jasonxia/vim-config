@@ -39,4 +39,5 @@ set t_Co=256
 
 call pathogen#infect() 
 set mouse=a
+set paste
 
