@@ -20,3 +20,5 @@ map <Leader>t :CommandT<cr>
  "set guifont=Menlo:h14
  set gfn=Monaco:h14:cANSI
 
+call pathogen#infect() 
+
