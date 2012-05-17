@@ -4,3 +4,6 @@
 [submodule "bundle/ruby-cucumber"]
 	path = bundle/ruby-cucumber
 	url = git://github.com/vinhtiensinh/ruby-cucumber.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
