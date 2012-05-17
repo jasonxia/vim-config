@@ -4,7 +4,7 @@ set showtabline=2
 set tabpagemax=15
 
 "Font info
-set guifont=Menlo:h14
+set guifont=Monaco:h13
 
 set guioptions-=L
 set guioptions-=l
