@@ -50,4 +50,10 @@ call InitJavaScript()
 let g:Powerline_symbols='unicode'
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_match_window_reversed = 0
-
+let g:ctrlp_user_command = {
+ \ 'types': {
+	 \ 1: ['.git/', 'cd %s && git ls-files'],
+	 \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
+	 \ },
+ \ 'fallback': 'find %s -type f'
+ \ }
