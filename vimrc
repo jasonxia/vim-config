@@ -1,3 +1,7 @@
+function! InitJavaScript() 
+	autocmd FileType javascript set tabstop=2
+endfunction
+
 "Set Mapleader
 let g:mapleader = ","
 
@@ -19,7 +23,9 @@ set ruler "show current position
 set number "show line number
 set showmatch "show maching braces
 set shiftwidth=2
-set tabstop=4
+set tabstop=2
+set smartindent
+set autoindent
 "Other Options
 set wildmode=longest,list,full
 set wildmenu
@@ -38,8 +44,10 @@ map <Leader>, :NERDTreeToggle<cr>
 map <Leader>b :BufExplorerHorizontalSplit<cr>
 
 call pathogen#infect() 
+call InitJavaScript()
 
 "set global variable
 let g:Powerline_symbols='unicode'
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_match_window_reversed = 0
+
