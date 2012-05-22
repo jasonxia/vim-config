@@ -23,6 +23,7 @@ set ruler "show current position
 set number "show line number
 set showmatch "show maching braces
 set shiftwidth=2
+set expandtab
 set tabstop=2
 set smartindent
 set autoindent
@@ -42,6 +43,7 @@ syntax on
 
 map <Leader>, :NERDTreeToggle<cr>
 map <Leader>b :BufExplorerHorizontalSplit<cr>
+map <leader>d orequire 'ruby-debug'; debugger<esc>
 
 call pathogen#infect() 
 call InitJavaScript()
