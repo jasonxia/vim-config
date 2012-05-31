@@ -12,7 +12,6 @@ filetype plugin on
 set autoread
 
 set wrap
-set autoindent
 set cmdheight=2 "command bar is 2 high
 set backspace=indent,eol,start "set backspace function
 set hlsearch "highlight searched things
