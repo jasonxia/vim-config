@@ -6,15 +6,17 @@ function! InitGroovy()
 	autocmd BufNewFile,BufRead *.gradle setf groovy
 endfunction
 
-"Set Mapleader
-let g:mapleader = ","
+" Use Pathogen to keep plugins in bundles
+filetype off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+filetype plugin indent on
+syntax on
 
-""Turn filetype plugin on
-filetype plugin on
+call InitJavaScript()
+call InitGroovy()
 
-"Set to auto read when a file is changed from the outside
-set autoread
-
+set autoread "Set to auto read when a file is changed from the outside
 set wrap
 set cmdheight=2 "command bar is 2 high
 set backspace=indent,eol,start "set backspace function
@@ -41,16 +43,13 @@ set paste
 colorscheme vividchalk
 set t_Co=256
 
-filetype plugin indent on
-syntax on
+"Set Mapleader
+let g:mapleader = ","
 
 map <Leader>, :NERDTreeToggle<cr>
+map <Leader>/  <plug>NERDCommenterToggle<cr>
 map <Leader>b :BufExplorerHorizontalSplit<cr>
 map <leader>d orequire 'ruby-debug'; debugger<esc>
-
-call pathogen#infect() 
-call InitJavaScript()
-call InitGroovy()
 
 "set global variable
 let g:Powerline_symbols='unicode'
