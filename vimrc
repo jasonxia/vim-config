@@ -61,3 +61,9 @@ let g:ctrlp_user_command = {
 	 \ },
  \ 'fallback': 'find %s -type f'
  \ }
+
+if has("gui_running")
+  set guioptions=aAce
+  set showtabline=2
+  set guifont=Monaco:h13
+endif
