@@ -2,6 +2,10 @@ function! InitJavaScript()
 	autocmd FileType javascript set tabstop=2
 endfunction
 
+function! InitGroovy() 
+	autocmd BufNewFile,BufRead *.gradle setf groovy
+endfunction
+
 "Set Mapleader
 let g:mapleader = ","
 
@@ -46,6 +50,7 @@ map <leader>d orequire 'ruby-debug'; debugger<esc>
 
 call pathogen#infect() 
 call InitJavaScript()
+call InitGroovy()
 
 "set global variable
 let g:Powerline_symbols='unicode'
