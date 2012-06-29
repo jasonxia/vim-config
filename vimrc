@@ -47,7 +47,10 @@ let g:mapleader = ","
 
 map <Leader>, :NERDTreeToggle<cr>
 map <Leader>/  <plug>NERDCommenterToggle<cr>
-map <Leader>b :BufExplorerHorizontalSplit<cr>
+"Show ctags - TagList plugin
+map <leader>c :TlistToggle<cr>
+"Build ctags (requires exuberant-ctags)
+map <leader>C :!ctags -R .<cr>
 map <leader>d orequire 'ruby-debug'; debugger<esc>
 
 "set global variable
