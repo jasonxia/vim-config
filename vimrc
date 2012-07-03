@@ -27,8 +27,9 @@ set ruler "show current position
 set number "show line number
 set showmatch "show maching braces
 set shiftwidth=2
-set expandtab
+set softtabstop=2
 set tabstop=2
+set expandtab
 set smartindent
 set autoindent
 "Other Options
