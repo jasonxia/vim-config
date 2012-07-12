@@ -54,6 +54,10 @@ map <leader>c :TlistToggle<cr>
 "Build ctags (requires exuberant-ctags)
 map <leader>C :!ctags -R .<cr>
 map <leader>d orequire 'ruby-debug'; debugger<esc>
+" Format JSON - filter the file through Python to format it
+map <Leader>j :%!python -m json.tool<cr>
+"Reveal file in NerdTree
+map <leader>r :NERDTreeFind<cr>
 nmap <silent> <leader>s :set spell!<cr>
 
 "set global variable
