@@ -74,8 +74,8 @@ let g:ctrlp_user_command = {
  \ }
 
 " zen-coding settings
-"let g:user_zen_expandabbr_key = '<c-e>'
-imap <C-Space> <C-y>,
+let g:user_zen_expandabbr_key = '<c-e>'
+imap <C-Space> <C-e>
 let g:use_zen_complete_tag = 1
 let g:user_zen_settings = {
   \  'haml' : {
