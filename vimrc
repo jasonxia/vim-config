@@ -59,6 +59,11 @@ map <Leader>j :%!python -m json.tool<cr>
 "Reveal file in NerdTree
 map <leader>r :NERDTreeFind<cr>
 nmap <silent> <leader>s :set spell!<cr>
+" window movement/operations
+map + <c-w>+
+map - <c-w>-
+map = <c-w>=
+map _ <c-w>_
 
 "set global variable
 let g:Powerline_symbols='unicode'
@@ -81,6 +86,11 @@ let g:user_zen_settings = {
   \  'haml' : {
   \    'filters' : 'haml',
   \  },
+  \  'ruby' : {
+  \    'snippets' : {
+  \      'debug' : 'require "ruby-debug"; debugger'
+  \    },
+  \  }
   \}
 
 if has("gui_running")
