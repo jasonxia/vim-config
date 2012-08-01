@@ -101,5 +101,5 @@ let g:user_zen_settings = {
 if has("gui_running")
   set guioptions=aAce
   set showtabline=2
-  set guifont=Monaco:h12
+  set guifont=Monaco:h13
 endif
