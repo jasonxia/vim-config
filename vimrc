@@ -60,6 +60,7 @@ map <leader>f :Grep<cr>
 map <Leader>j :%!python -m json.tool<cr>
 "Reveal file in NerdTree
 map <leader>r :NERDTreeFind<cr>
+nmap <silent> <leader>R :let @+ = expand("%")<cr>
 nmap <silent> <leader>s :set spell!<cr>
 " window movement/operations
 map + <c-w>+
@@ -68,8 +69,10 @@ map = <c-w>=
 map _ <c-w>_
 
 "set global variable
-let g:Powerline_symbols='unicode'
-let g:Tlist_Show_One_File=1
+let g:Powerline_symbols = 'unicode'
+let g:Tlist_Show_One_File = 1
+let g:Tlist_Use_Right_Window = 1
+let g:Tlist_GainFocus_On_ToggleOpen = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_user_command = {
