@@ -49,3 +49,6 @@
 [submodule "bundle/grep.vim"]
 	path = bundle/grep.vim
 	url = https://github.com/vim-scripts/grep.vim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git

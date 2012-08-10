@@ -38,7 +38,7 @@ set wildmenu
 set nobackup
 set nocompatible
 set mouse=a
-set paste
+"set paste
 "Colorscheme options
 colorscheme vividchalk
 set t_Co=256
@@ -63,10 +63,10 @@ map <leader>r :NERDTreeFind<cr>
 nmap <silent> <leader>R :let @+ = expand("%")<cr>
 nmap <silent> <leader>s :set spell!<cr>
 " window movement/operations
-map + <c-w>+
-map - <c-w>-
-map = <c-w>=
-map _ <c-w>_
+map <leader>+ <c-w>+
+map <leader>- <c-w>-
+map <leader>= <c-w>=
+map <leader>_ <c-w>_
 
 "set global variable
 let g:Powerline_symbols = 'unicode'
@@ -93,11 +93,6 @@ let g:use_zen_complete_tag = 1
 let g:user_zen_settings = {
   \  'haml' : {
   \    'filters' : 'haml',
-  \  },
-  \  'ruby' : {
-  \    'snippets' : {
-  \      'debug' : 'require "ruby-debug"; debugger'
-  \    },
   \  }
   \}
 
