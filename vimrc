@@ -49,20 +49,20 @@ let g:mapleader = ","
 map <Leader>, :NERDTreeToggle<cr>
 map <Leader>/  <plug>NERDCommenterToggle<cr>
 map <Leader>b :BufExplorerHorizontalSplit<cr>
-"Show ctags - TagList plugin
-map <leader>c :TlistToggle<cr>
-"Build ctags (requires exuberant-ctags)
-map <leader>C :!ctags -R .<cr>
-map <leader>d orequire 'ruby-debug'; debugger<esc>
+"Copy the file path to buffer
+map <silent> <Leader>c :let @+ = expand("%")<cr>
+map <Leader>d orequire 'ruby-debug'; debugger<esc>
 "Grep.vim
-map <leader>f :Grep<cr>
-" Format JSON - filter the file through Python to format it
+map <Leader>f :Grep<cr>
+"Format JSON - filter the file through Python to format it
 map <Leader>j :%!python -m json.tool<cr>
 "Reveal file in NerdTree
-map <leader>r :NERDTreeFind<cr>
-nmap <silent> <leader>R :let @+ = expand("%")<cr>
-nmap <silent> <leader>s :set spell!<cr>
-" window movement/operations
+map <Leader>R :NERDTreeFind<cr>
+"Show ctags - TagList plugin
+map <leader>t :TlistToggle<cr>
+"Build ctags (requires exuberant-ctags)
+map <leader>T :!ctags -R .<cr>
+"window movement/operations
 map <leader>+ <c-w>+
 map <leader>- <c-w>-
 map <leader>= <c-w>=
