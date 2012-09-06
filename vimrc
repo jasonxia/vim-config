@@ -52,6 +52,7 @@ map <Leader>b :BufExplorerHorizontalSplit<cr>
 "Copy the file path to buffer
 map <silent> <Leader>c :let @+ = expand("%")<cr>
 map <Leader>d orequire 'ruby-debug'; debugger<esc>
+map <Leader>p ouse Data::Dumper; print STDERR '' . Dumper('');<esc>
 "Grep.vim
 map <Leader>f :Grep<cr>
 "Format JSON - filter the file through Python to format it
