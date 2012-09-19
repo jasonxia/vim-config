@@ -42,6 +42,8 @@ set mouse=a
 "Colorscheme options
 colorscheme vividchalk
 set t_Co=256
+set list
+set listchars=tab:=»,trail:·
 
 "Set Mapleader
 let g:mapleader = ","
