@@ -1,11 +1,10 @@
-Submodules :>
- Add :>
-   ~/.vim$ git submodule add https://github.com/ecomba/ctrlp.git bundle/ctrlp
+## About
+This is my personal vim config repo.
 
- Use :>
-   ~/.vim$ git submodule init && git submodule update
+## Quick setup
+Just clone this repo to ~/.vim and run install script
 
- Remove :>
-   * First step is remove references to the submodule in .gitmodules and .git/config
-   * Then git rm --cached bundle/ctrlp
-
+     ```
+     $ git clone https://github.com/jasonxia/vim-config.git ~/.vim
+     $ ~/.vim/install
+     ```

@@ -6,14 +6,45 @@ function! InitGroovy()
 	autocmd BufNewFile,BufRead *.gradle setf groovy
 endfunction
 
-" Use Pathogen to keep plugins in bundles
+" Use Vundle to manage plugins
 filetype off
-call pathogen#infect()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+" vim-scripts repos
+Bundle 'L9'
+
+" original repos on github
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'mattn/zencoding-vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'gregsexton/gitv'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'bogado/file-line'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'vim-scripts/grep.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'vim-scripts/matchit.zip'
 filetype plugin indent on
-syntax on
 
 call InitJavaScript()
 call InitGroovy()
+
+"Colorscheme options
+colorscheme vividchalk
+syntax on
+set t_Co=256
 
 set autoread "Set to auto read when a file is changed from the outside
 set wrap
@@ -39,9 +70,6 @@ set nobackup
 set nocompatible
 set mouse=a
 "set paste
-"Colorscheme options
-colorscheme vividchalk
-set t_Co=256
 set list
 set listchars=tab:=»,trail:·
 
