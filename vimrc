@@ -1,9 +1,24 @@
-function! InitJavaScript() 
-	autocmd FileType javascript set tabstop=2
+function! InitJavaScript()
+  autocmd FileType javascript set tabstop=2
 endfunction
 
-function! InitGroovy() 
-	autocmd BufNewFile,BufRead *.gradle setf groovy
+function! InitGroovy()
+  autocmd BufNewFile,BufRead *.gradle setf groovy
+endfunction
+
+function! InitMarkdown()
+  autocmd BufNewFile,BufRead *.md setf markdown
+endfunction
+
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
 endfunction
 
 " Use Vundle to manage plugins
@@ -19,6 +34,7 @@ Bundle 'L9'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mattn/zencoding-vim'
+Bundle 'godlygeek/tabular'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'gregsexton/gitv'
@@ -27,12 +43,13 @@ Bundle 'bogado/file-line'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-rails'
 Bundle 'hallison/vim-ruby-sinatra'
+Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-vividchalk'
+Bundle 'tpope/vim-markdown'
 Bundle 'vim-scripts/grep.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
@@ -41,6 +58,7 @@ filetype plugin indent on
 
 call InitJavaScript()
 call InitGroovy()
+call InitMarkdown()
 
 "Colorscheme options
 colorscheme vividchalk
@@ -99,6 +117,8 @@ map <leader>+ <c-w>+
 map <leader>- <c-w>-
 map <leader>= <c-w>=
 map <leader>_ <c-w>_
+
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 "set global variable
 let g:Powerline_symbols = 'unicode'
