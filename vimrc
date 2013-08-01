@@ -55,6 +55,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'derekwyatt/vim-scala'
 filetype plugin indent on
 
 call InitJavaScript()
