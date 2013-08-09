@@ -50,10 +50,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rake'
 Bundle 'vim-scripts/grep.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'derekwyatt/vim-scala'
 filetype plugin indent on
@@ -61,6 +63,7 @@ filetype plugin indent on
 call InitJavaScript()
 call InitGroovy()
 call InitMarkdown()
+call yankstack#setup()
 
 "Colorscheme options
 colorscheme vividchalk
@@ -119,6 +122,9 @@ map <leader>+ <c-w>+
 map <leader>- <c-w>-
 map <leader>= <c-w>=
 map <leader>_ <c-w>_
+"Yankstack plugin
+ nmap <leader>o <Plug>yankstack_substitute_older_paste
+ nmap <leader>i <Plug>yankstack_substitute_newer_paste
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
