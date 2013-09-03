@@ -71,6 +71,7 @@ syntax on
 set t_Co=256
 
 set autoread "Set to auto read when a file is changed from the outside
+set clipboard=unnamedplus " yank and paste with the system clipboard
 set wrap
 set cmdheight=2 "command bar is 2 high
 set backspace=indent,eol,start "set backspace function
@@ -90,6 +91,7 @@ set autoindent
 "Other Options
 set wildmode=longest,list,full
 set wildmenu
+set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set nobackup
 set nocompatible
 set mouse=a
