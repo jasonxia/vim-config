@@ -10,6 +10,10 @@ function! InitMarkdown()
   autocmd BufNewFile,BufRead *.md setf markdown
 endfunction
 
+function! InitFreeMarker()
+  autocmd BufNewFile,BufRead *.ftl setf ftl
+endfunction
+
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -58,11 +62,14 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'chaquotay/ftl-vim-syntax'
+Bundle 'terryma/vim-multiple-cursors'
 filetype plugin indent on
 
 call InitJavaScript()
 call InitGroovy()
 call InitMarkdown()
+call InitFreeMarker()
 call yankstack#setup()
 
 "Colorscheme options
@@ -71,7 +78,6 @@ syntax on
 set t_Co=256
 
 set autoread "Set to auto read when a file is changed from the outside
-set clipboard=unnamedplus " yank and paste with the system clipboard
 set wrap
 set cmdheight=2 "command bar is 2 high
 set backspace=indent,eol,start "set backspace function
@@ -125,8 +131,8 @@ map <leader>- <c-w>-
 map <leader>= <c-w>=
 map <leader>_ <c-w>_
 "Yankstack plugin
- nmap <leader>o <Plug>yankstack_substitute_older_paste
- nmap <leader>i <Plug>yankstack_substitute_newer_paste
+nmap <leader>o <Plug>yankstack_substitute_older_paste
+nmap <leader>i <Plug>yankstack_substitute_newer_paste
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
