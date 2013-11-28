@@ -64,6 +64,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'skammer/vim-css-color'
 filetype plugin indent on
 
 call InitJavaScript()
