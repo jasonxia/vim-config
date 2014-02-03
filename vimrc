@@ -65,6 +65,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'chaquotay/ftl-vim-syntax'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'skammer/vim-css-color'
+Bundle 'mhinz/vim-signify'
 filetype plugin indent on
 
 call InitJavaScript()
