@@ -28,44 +28,45 @@ endfunction
 " Use Vundle to manage plugins
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 " vim-scripts repos
-Bundle 'L9'
+Plugin 'L9'
 
 " original repos on github
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'mattn/zencoding-vim'
-Bundle 'godlygeek/tabular'
-Bundle 'msanders/snipmate.vim'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'gregsexton/gitv'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'bogado/file-line'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'hallison/vim-ruby-sinatra'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rake'
-Bundle 'vim-scripts/grep.vim'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'maxbrunsfeld/vim-yankstack'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'chaquotay/ftl-vim-syntax'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'skammer/vim-css-color'
-Bundle 'mhinz/vim-signify'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'mattn/emmet-vim'
+Plugin 'godlygeek/tabular'
+Plugin 'msanders/snipmate.vim'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'gregsexton/gitv'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'bogado/file-line'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'hallison/vim-ruby-sinatra'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rake'
+Plugin 'vim-scripts/grep.vim'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/bufexplorer.zip'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'chaquotay/ftl-vim-syntax'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'skammer/vim-css-color'
+Plugin 'mhinz/vim-signify'
+
+call vundle#end()
 filetype plugin indent on
 
 call InitJavaScript()
@@ -156,15 +157,8 @@ let g:ctrlp_user_command = {
 " grep.vim settings
 let Grep_Default_Options = '-ir'
 
-" zen-coding settings
-let g:user_zen_expandabbr_key = '<c-e>'
-imap <C-Space> <C-e>
-let g:use_zen_complete_tag = 1
-let g:user_zen_settings = {
-  \  'haml' : {
-  \    'filters' : 'haml',
-  \  }
-  \}
+" Emmet settings
+let g:user_emmet_leader_key = '<C-Space>'
 
 " signify
 let g:signify_disable_by_default = 1
