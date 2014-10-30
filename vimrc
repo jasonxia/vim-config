@@ -26,8 +26,9 @@ function! s:align()
 endfunction
 
 " Use Vundle to manage plugins
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -65,6 +66,7 @@ Plugin 'chaquotay/ftl-vim-syntax'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'skammer/vim-css-color'
 Plugin 'mhinz/vim-signify'
+Plugin 'genoma/vim-less'
 
 call vundle#end()
 filetype plugin indent on

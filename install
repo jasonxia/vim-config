@@ -4,7 +4,7 @@
 # git clone git@github.com:jasonxia/vim-config.git ~/.vim
 
 # Step 2: checkout Vundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Step 3: Backup old vim configuration
 [ -f ~/.vimrc ]  && mv -i ~/.vimrc{,.bak}
@@ -13,4 +13,4 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ln -s ~/.vim/vimrc ~/.vimrc
 
 # Step 5: Install all the plugins
-vim +BundleInstall +qall
+vim +PluginInstall +qall
