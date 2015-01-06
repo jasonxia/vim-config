@@ -67,6 +67,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'skammer/vim-css-color'
 Plugin 'mhinz/vim-signify'
 Plugin 'genoma/vim-less'
+Plugin 'slim-template/vim-slim'
 
 call vundle#end()
 filetype plugin indent on
@@ -106,6 +107,7 @@ set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set nobackup
 set nocompatible
 set mouse=a
+set cursorline
 "set paste
 set list
 set listchars=tab:=»,trail:·
