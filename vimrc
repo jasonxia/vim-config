@@ -68,6 +68,7 @@ Plugin 'skammer/vim-css-color'
 Plugin 'mhinz/vim-signify'
 Plugin 'genoma/vim-less'
 Plugin 'slim-template/vim-slim'
+Plugin 'vim-scripts/Vim-R-plugin'
 
 call vundle#end()
 filetype plugin indent on
@@ -120,7 +121,7 @@ map <Leader>/  <plug>NERDCommenterToggle<cr>
 map <Leader>b :BufExplorerHorizontalSplit<cr>
 "Copy the file path to buffer
 map <silent> <Leader>c :let @+ = expand("%")<cr>
-map <Leader>d orequire 'ruby-debug'; debugger<esc>
+map <Leader>d orequire 'byebug'; byebug<esc>
 map <Leader>p ouse Data::Dumper; print STDERR '' . Dumper('');<esc>
 "Grep.vim
 map <Leader>f :Grep<cr>
