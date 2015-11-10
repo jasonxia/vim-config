@@ -69,6 +69,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'genoma/vim-less'
 Plugin 'slim-template/vim-slim'
 Plugin 'vim-scripts/Vim-R-plugin'
+Plugin 'vim-scripts/AutoComplPop'
 
 call vundle#end()
 filetype plugin indent on
@@ -133,6 +134,12 @@ map <Leader>R :NERDTreeFind<cr>
 map <leader>t :TlistToggle<cr>
 "Build ctags (requires exuberant-ctags)
 map <leader>T :!ctags -R .<cr>
+" move line up and down
+nnoremap <S-Up>   :<C-u>silent! move-2<CR>==
+nnoremap <S-Down> :<C-u>silent! move+<CR>==
+xnoremap <S-Up>   :<C-u>silent! '<,'>move-2<CR>gv=gv
+xnoremap <S-Down> :<C-u>silent! '<,'>move'>+<CR>gv=gv
+
 "window movement/operations
 map <leader>+ <c-w>+
 map <leader>- <c-w>-
