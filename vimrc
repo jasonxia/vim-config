@@ -14,6 +14,10 @@ function! InitFreeMarker()
   autocmd BufNewFile,BufRead *.ftl setf ftl
 endfunction
 
+function! InitTypeScript()
+  autocmd BufNewFile,BufRead *.ts setf typescript
+endfunction
+
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -71,6 +75,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'vim-scripts/Vim-R-plugin'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -79,6 +84,7 @@ call InitJavaScript()
 call InitGroovy()
 call InitMarkdown()
 call InitFreeMarker()
+call InitTypeScript()
 call yankstack#setup()
 
 "Colorscheme options
