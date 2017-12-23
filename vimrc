@@ -76,6 +76,8 @@ Plugin 'vim-scripts/Vim-R-plugin'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
 
 call vundle#end()
 filetype plugin indent on
